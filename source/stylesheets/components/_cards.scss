@@ -1,11 +1,31 @@
 .card {
   height: 175px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
   background-position: center;
-  color: white;
+  color: #616668;
   position: relative;
+  p {
+  color: #616668;
+  }
+  h2 {
+  color: #616668;
+  font-size: 20px;
+  }
 }
+
+img {
+  width: 80%;
+}
+
+.card-title {
+  position: absolute;
+  bottom: 0px;
+  left: 30px;
+  font-size: 25px;
+  color: white;
+  text-transform: uppercase;
+}
+
 .card-category {
   position: absolute;
   top: 10px;
@@ -18,14 +38,7 @@
   bottom: 10px;
   left: 10px;
 }
-.card-description h2 {
-  font-size: 24px;
-}
-.card-description p {
-  font-size: 14px;
-  opacity: 0.7;
-  font-weight: lighter;
-}
+
 .card-link {
   position: absolute;
   top: 0;
