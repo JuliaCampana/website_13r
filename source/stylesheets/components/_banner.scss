@@ -5,7 +5,7 @@
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   background-color: #8ebcb8;
-  align-items: center;
+  align-items: center;position: relative;
 }
 .banner h1 {
   font-size: 50px;
@@ -21,6 +21,9 @@
 }
 
 .banner-content{
-
+  align-items: center;
+  position: absolute;
+  margin-top: 60px;
+  padding: 20px 40px
 }
 
