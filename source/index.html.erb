@@ -1,81 +1,28 @@
 ---
 title: 13 Robotics
 ---
-<body>
-
-<div class="navbar-13">
-  <!-- Logo -->
-
-  <a href="/" class="navbar-13-brand">
-    <img src="images/logo.svg" alt="logo">
-  </a>
-  <!-- Right Navigation -->
-
-  <div class="navbar-13-right hidden-xs hidden-sm">
-
-    <a href="../index.html" class="navbar-13-item navbar-13-link">Home</a>
-    <a href="about.html" class="navbar-13-item navbar-13-link">About</a>
-    <a href="projects.html" class="navbar-13-item navbar-13-link">Projects</a>
-    <a href="team.html" class="navbar-13-item navbar-13-link">Team</a>
-    <a href="#" class="navbar-13-item navbar-13-link">Contact</a>
-  </div>
-  <!-- Dropdown appearing on mobile only -->
-  <div class="navbar-13-item hidden-md hidden-lg">
-    <div class="dropdown">
-      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-      <ul class="dropdown-menu dropdown-menu-right navbar-13-dropdown-menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Team</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<div class="banner">
-  <div class="banner-content">
-    <h1>We deliver robotics solutions for the energy industries</h1>
-      <p>Thirteen Robotics core business is to bring to market the technologies that are necessary for safer and more efficient exploration and maintenance operations.</p>
-      <p><a href="mailto:info@13robotics.com" class="btn btn-primary btn-lg">Contact Us</a></p>
-  </div>
-</div>
+<%= partial "layouts/banner" %>
 
 <div class="wrapper">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-md-4 card">
-        <img src="images/heads/heads-thumb.png" alt="picture description" width="100">
-          <h2 class="section-title"><strong>Camera Stabilization</strong></h2>
-          <p>Stabilisation unit for a hydrocarbon detection camera, O&G floating production facilities worldwide</p>
-      </div>
-      <div class="col-xs-12 col-md-4 card">
-        <img src="images/emma/emma-thumb.png" alt="picture description" width="100">
-          <h2 class="section-title"><strong>In Situ maintenance</strong></h2>
-          <p>Deployment of In Situ hard coating technology for hydropower turbine blades.</p>
-      </div>
-      <div class="col-xs-12 col-md-4 card">
-        <img src="images/flatfish/flatfish-thumb.png" alt="picture description" width="100">
-          <h2 class="section-title"><strong>AUV/ROV Inspection</strong></h2>
-          <p>Research with autonomous underwater inspection vehicle for O&G, subsea resident or platform launched.</p>
-      </div>
+      <% data.projects.each do |name, project| %>
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <div class="card" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%), url('https://kitt.lewagon.com/placeholder/cities/<%= project.city_slug %>');">
+            <div class="card-category"><%= project.city_name %></div>
+            <div class="card-description">
+              <h3><%= project.name %></h3>
+              <p><%= project.briefing %></p>
+            </div>
+            <%= image_tag "images/projects/#{name}.png", class:"card" %>
+            <%= link_to "", "projects/#{name}.html", class: "card-link" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
     </div>
   </div>
 
 </div>
 
-
-<!-- footer -->
-  <div class="footer ">
-    <div class="footer-links">
-      <a href="#"><i class="fa fa-github"></i></a>
-      <a href="#"><i class="fa fa-linkedin"></i></a>
-    </div>
-    <div class="footer-copyright">
-      All rights reserved <i class="fas fa-robot"></i>
-    </div>
-  </div>
-
-</body>
 

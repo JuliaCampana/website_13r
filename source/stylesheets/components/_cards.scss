@@ -14,7 +14,7 @@
 }
 
 img {
-  width: 80%;
+  width: 100%;
 }
 
 .card-title {
@@ -34,9 +34,10 @@ img {
   text-transform: uppercase;
 }
 .card-description {
+  z-index: 1000;
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  bottom: -200px;
+
 }
 
 .card-link {

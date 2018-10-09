@@ -1,0 +1,26 @@
+<!-- Access data.flats with owner's name as key
+project = data.projects[name] %>
+
+<div class="container">
+  <div class="info row">
+    <div class="projects-info col-xs-12 col-md-6">
+      <h1><%= project.name %></h1>
+      <p><%= project.description %></p>
+    </div>
+  </div>
+</div>
+
+Inject flat data in template -->
+
+<% project= data.projects.name %>
+
+<div class="banner" style='background-image: linear-gradient(-225deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%), url("images/projects/<%= project.name %>"); background-size: cover; height: 30vh; background-position: center;'>
+</div>
+<div class="container">
+  <div class="info">
+    <div class="project-info">
+      <h1><%= project.name %></h1>
+      <p><%= project.description %></p>
+    </div>
+  </div>
+</div>
