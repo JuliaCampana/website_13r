@@ -1,22 +1,22 @@
 <div class="jumbotron p-img">
 
 </div>
+
 <div class="wrapper">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-md-12">
         <h3>Our members</h3>
           <ul class="list-inline text-center">
-            <% ["Alana Monteiro", "Eduardo Elael", "Estevão Ferrão", "Gabriel Alcantara", "Henrique Calil", "Ighor Marcovistz", "Julia Campana", "Renan Salles"].each do |name| %>
+            <% data.users.each do |user| %>
             <li>
-              <%= image_tag "images/avatars/julia.png", class: "avatar" %>
-              <h2><%= user.name %></h2>
-              <h3></h3>
+              <%= image_tag "avatars/#{user.name}.png", class: "avatar" %>
+              <h4><%= user.name %></h4>
+              <p><%= user.function %></p>
             </li>
           <% end %>
         </ul>
       </div>
-
     </div>
   </div>
 </div>
